@@ -57,7 +57,7 @@ public class DatabaseHelper extends OrmLiteSqliteOpenHelper {
 
     public Dao<Numbers, Integer> getNumbersDao() throws SQLException {
         if (numbersDao == null) {
-            numbersDao = getDao(Contact.class);
+            numbersDao = getDao(Numbers.class);
         }
         return numbersDao;
     }

@@ -17,7 +17,7 @@ public class Contact {
     public static final String FIELD_NAME_NAME = "name";
     public static final String FIELD_NAME_SURNAME = "surname";
     public static final String FIELD_NAME_ADDRESS = "address";
-    public static final String FIELD_NAME_NUMBER = "number";
+    public static final String FIELD_NAME_NUMBER= "number";
 
     @DatabaseField(columnName = FIELD_NAME_ID, generatedId = true)
     private int id;
@@ -32,7 +32,7 @@ public class Contact {
     private String address;
 
     @ForeignCollectionField(columnName = FIELD_NAME_NUMBER, eager = true)
-    private ForeignCollection<Number> number;
+    private ForeignCollection<Numbers> number;
 
     public Contact(){}
 
@@ -68,11 +68,11 @@ public class Contact {
         this.address = address;
     }
 
-    public ForeignCollection<Number> getNumber() {
+    public ForeignCollection<Numbers> getNumber() {
         return number;
     }
 
-    public void setNumber(ForeignCollection<Number> number) {
+    public void setNumber(ForeignCollection<Numbers> number) {
         this.number = number;
     }
 
