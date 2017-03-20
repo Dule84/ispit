@@ -22,18 +22,16 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListAdapter;
 import android.widget.ListView;
-import android.widget.Spinner;
 import android.widget.Toast;
 
 import com.example.androiddevelopment.imenik.R;
 import com.example.androiddevelopment.imenik.activities.db.DatabaseHelper;
 import com.example.androiddevelopment.imenik.activities.dialog.AboutDialog;
 import com.example.androiddevelopment.imenik.activities.model.Contact;
-import com.example.androiddevelopment.imenik.activities.preference.Settings;
+import com.example.androiddevelopment.imenik.activities.preferences.Preference;
 import com.j256.ormlite.android.apptools.OpenHelperManager;
 
 import java.sql.SQLException;
-import java.util.ArrayList;
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
@@ -196,7 +194,7 @@ public class MainActivity extends AppCompatActivity {
                 alertDialog.show();
                 break;
             case R.id.settings:
-                startActivity(new Intent(MainActivity.this, Settings.class));
+                startActivity(new Intent(MainActivity.this, Preference.class));
                 break;
         }
 
